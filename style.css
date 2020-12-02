@@ -1,0 +1,236 @@
+p{
+    text-align: justify;
+}
+
+/*Cabeçalho*/
+
+.input-group-text{
+    background-color: white;
+}
+
+.nav-item a:hover{
+    background-color: rgb(221, 79, 79);
+    
+}
+
+.logo-img{
+    width: 240px;
+}
+
+.logo-img2{
+    width: 200px;
+}
+
+/*Main*/
+
+.bg-car{
+    background-color: rgb(229, 226, 226);
+}
+
+.lancamento{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.darker-section {
+    background-color: #E4E4E4;
+}
+
+.carousel li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #454545;
+}
+
+.video-car{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.car-sec {
+    min-height: 450px;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.card{
+    margin-bottom: 20px;
+    min-height: 500px;
+}
+
+.card img{
+    height: 340px;
+}
+
+.destaque-area{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dropdown{
+    float: right;
+}
+
+.btn-area{
+    border-color: #e7e7e7;
+}
+
+.btn-area:hover {
+    background: #c2bcbcf1;
+}
+
+.dropdown-menu a:hover{
+    background: #c2bcbcf1;
+}
+
+.row-ult{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.row-aval p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.btn-card2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-ent{
+    position: relative;
+    height: 240px;
+    width: 100%;
+}
+
+.ent-mg{
+    margin-top: 10px;
+}
+
+.makingof{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #343a40;
+}
+
+.letra-ent{
+    color: whitesmoke;
+}
+
+.novidades{
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.fa-user{
+    font-size: 24px;
+}
+
+/*Rodapé*/
+
+.footer{
+    background-color: #343a40;
+    color:white;
+    margin-top:20px;
+}
+
+.footer-area{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.logo-rodape{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 340px){
+    .logo-img{
+        width: 170px
+    }
+}
+
+@media screen and (max-width: 992px){
+    .nav-al li{
+        text-align: center;
+    }
+
+    .search-btn{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 768px){
+    .btn-mais{
+  
+        position: absolute;
+        display: inline-block;
+        right:    5px;
+        bottom:   5px;
+    }
+
+    .par-filmes{
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    .btn-mais{
+        
+        right:    5px;
+        bottom:   5px;
+    }
+    .coluna-mais{
+        justify-content: center;
+    }
+
+    .titulo-search{
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .res-search{
+        justify-content: center;
+    }
+}
+
+/*PÁGINA DE PESQUISA*/
+
+.pesq-div{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+
+.box-filme{
+    margin-top: 20px;
+    margin-top: 20px;
+    border-radius: 20px !important;
+    background-color: #f1f8ff;
+    border-width:0.5px;
+    border-style:solid;
+    border-color: #bec9d4;    
+}
+
+#body2{
+    background-color: rgb(237, 237, 238);
+}
+
+.footer2{
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta charset="UTF-8">
+
+  <title>Portal de Filmes</title>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/c096fc2c05.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img class="logo-img" src="imgs/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto nav-al">
+          <li class="nav-item">
+            <a id = "btn-release" class="nav-link" href="#">Lançamentos</a>
+          </li>
+          <li class="nav-item">
+            <a id = "btn-destaque" class="nav-link" href="#">Destaque</a>
+          </li>
+          <li class="nav-item">
+            <a id = "btn-avaliacoes" class="nav-link" href="#">Avaliações</a>
+          </li>
+          <li class="nav-item">
+            <a id = "btn-entMake" class="nav-link" href="#">Entrevista e Making Of</a>
+          </li>
+          <li class="nav-item">
+            <a id = "btn-news" class="nav-link" href="#">Novidades</a>
+          </li>
+        </ul>
+        <div class="input-group col-12 col-md-12 col-lg-3">
+          <span class="input-group-prepend">
+            <div class="input-group-text border-right-0">
+              <i class="fa fa-search"></i>
+            </div>
+          </span>
+          <input class="form-control shadow-none py-2 border-left-0 mr-sm-2" type="search" placeholder="Pesquisar"
+            id="search-site">
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id= "carroceu" class = "bg-car">
+      <div id ="lancamento" class="lancamento">
+        <h2>Lançamentos</h4>
+      </div>
+
+      <div id="carouselLancamento" class="carousel slide" data-interval="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselLancamento" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselLancamento" data-slide-to="1"></li>
+          <li data-target="#carouselLancamento" data-slide-to="2"></li>
+          <li data-target="#carouselLancamento" data-slide-to="3"></li>
+        </ol>
+        <div id ="carousel" class="carousel-inner px-4">
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="destaques" class="row  destaque-area">
+        <div class="col-12 col-sm-6">
+          <h2>Em destaque</h2>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="dropdown">
+            <button class="btn btn-area dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categoria: TODOS
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Aventura</a>
+              <a class="dropdown-item" href="#">Romance</a>
+              <a class="dropdown-item" href="#">Comédia</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row card-row">
+        <div class="col-12">
+          <div id="cards" class="row">
+
+        
+          </div>
+        </div>
+      </div>
+      <div class="row btn-card mx-0">
+
+        <button id = "load-movies" type="button" class="btn btn-dark btn-sm btn-mf col-xs-6 col-md-3 ml-auto"><i class="fas fa-plus"></i>
+           Carregar mais filmes
+        </button>
+
+      </div>
+      <div id= "avaliacoes" class="row row-ult">
+        <div class="col-12 col-sm-6">
+          <h2>Últimas Avaliações</h2>
+        </div>
+      </div>
+      <div class="row row-aval">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="row">
+            <div class="col-4">
+              <img class="rounded-circle w-100" src="imgs/critico1.png" alt="critico1">
+            </div>
+            <div class="col-8">
+              <h4>Leah Pickett</h4>
+              <p><strong>Filme:</strong> Star Wars: Os últimos Jedi</p>
+              <p><strong>Avaliação:</strong> O que é mais interessante para mim sobre O Último Jedi é o retorno de Luke como mentor ao invés de aluno, lutando com seu fracasso neste novo papel, e mais tarde aspirando a ser o professor sábio e paciente.</p>
+              <div>
+                <p class="nota-aval">
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star-half-alt text-dark"></span>  26/12/2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="row">
+            <div class="col-4">
+              <img class="rounded-circle w-100" src="imgs/critico2.png" alt="critico2">
+            </div>
+            <div class="col-8">
+              <h4>Ryan Silberstein</h4>
+              <p><strong>Filme:</strong> Star Wars: A Ascensão Skywalker</p>
+              <p><strong>Avaliação:</strong> Mas entre todos os saltos de galáxias e caça a bugigangas, há um grande Star Wars aqui. Esta trilogia foi mais eficaz ao explorar o legado Skywalker, e Star Wars: A Ascensão Skywalker continua essa tendência.</p>
+              <div>
+                <p class="nota-aval">
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="far fa-star"></span>  16/01/2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="row">
+            <div class="col-4">
+              <img class="rounded-circle w-100" src="imgs/critico3.png" alt="critico3">
+            </div>
+            <div class="col-8">
+              <h4>Christy Lemire</h4>
+              <p><strong>Filme:</strong> Star Wars: O Despertar da Força</p>
+              <p><strong>Avaliação:</strong> Isso é o incrível sobre o ato complicado que Abrams realizou com O Despertar da Força. Ele fez um filme que é simultaneamente emocionante e um grande lançamento. Estamos em boas mãos, finalmente.</p>
+              <div>
+                <p class="nota-aval">
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star text-dark"></span>
+                  <span class="fas fa-star-half-alt text-dark"></span>  20/12/2015</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row btn-card2 mx-0">
+        <button type="button" class="btn btn-dark btn-sm btn-mf col-xs-6 col-md-3 ml-auto"><i class="fas fa-plus"></i>
+           Carregar mais avaliações</button>
+      </div>
+
+    </div>
+
+    <div id = "entrevistas" class="makingof">
+      <div class="container">
+        <div class="row row-ult">
+          <div class="col-12">
+            <h2 class="letra-ent">Entrevista e Making Of</h2>
+          </div>
+        </div>
+        <div class="row ent-mak">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 ent-mg">
+            <div class="row">
+              <div class="col-12">
+                <iframe class="video-ent" src="https://www.youtube.com/embed/uuVGiNf3jck" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="col-12">
+                <h4 class="letra-ent"><strong>Filme:</strong> Star Wars: O Despertar da Força</h4>
+                <p class="letra-ent"><strong>Diretor:</strong> J. J. Abrams<br><strong>Roteiro:</strong> J. J. Abrams  <strong>Estreia:</strong> 2015</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 ent-mg">
+            <div class="row">
+              <div class="col-12">
+                <iframe class="video-ent" src="https://www.youtube.com/embed/7kzF6YQIDFQ" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="col-12">
+                <h4 class="letra-ent"><strong>Filme:</strong> Star Wars: Os Últimos Jedi</h4>
+                <p class="letra-ent"><strong>Diretor:</strong> Rian Johnson<br><strong>Roteiro:</strong> Rian Johnson  <strong>Estreia:</strong> 2017</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 ent-mg">
+            <div class="row">
+              <div class="col-12">
+                <iframe class="video-ent" src="https://www.youtube.com/embed/a_eOqh6ZOEA" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="col-12">
+                <h4 class="letra-ent"><strong>Filme:</strong> Star Wars: A Ascensão Skywalker</h4>
+                <p class="letra-ent"><strong>Diretor:</strong> J. J. Adams<br><strong>Roteiro:</strong> J. J. Adams  <strong>Estreia:</strong> 2019</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row btn-card2 mx-0">
+          <button type="button" class="btn btn-light btn-sm btn-mf col-xs-6 col-md-3 ml-auto"><i
+              class="fas fa-plus"></i>
+             Carregar mais filmes</button>
+        </div>
+      </div>
+    </div>
+
+    <div id = "novidades"class="container">
+      <div class="row novidades">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+          <div class="row">
+            <h2>Novidades</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5 my-auto">
+              <img class="w-100" src="imgs/nov1.png">
+            </div>
+            <div class="col-12 col-md-7">
+              <h5>Disney anuncia novo filme Star Wars</h5>
+              <p>Após nove filmes (divididos em três trilogias), mais spin-offs como “Rogue One” e “Solo”, e séries como “Guerra dos Clones” e “The Mandalorian”, a franquia “Star Wars” (Guerra nas Estrelas) ganhará mais um longa metragem.</p>
+              <h5><span class="badge badge-secondary">Novo Filme</span> <span class="badge badge-secondary">Hollywood</span> <span class="badge badge-secondary">Novidade</span></h5>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12 col-md-5 my-auto">
+              <img class="w-100" src="imgs/nov2.png">
+            </div>
+            <div class="col-12 col-md-7">
+              <h5>Terceira maior estreia da história</h5>
+              <p>A força segue claramente com os astros do espaço, já que “Star Wars: a Ascensão Skywalker” estreou com uma arrecadação estimada em 175,5 milhões de dólares na América do Norte, segundo a empresa Exhibitor Relations.</p>
+                <h5><span class="badge badge-secondary">Recorde</span> <span class="badge badge-secondary">Bilheteria</span> <span class="badge badge-secondary">Novidade</span></h5>
+
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12 col-md-5 my-auto">
+              <img class="w-100" src="imgs/nov3.png">
+            </div>
+            <div class="col-12 col-md-7">
+              <h5>Disney anuncia três novos filmes de Star Wars a partir de 2022</h5>
+              <p>A Disney anunciou na terça-feira (7) de Maio de 2019 que vai lançar três novos filmes da saga “Star Wars“, um a cada dois anos, a partir de 2022, alternando-se com quatro novas produções de “Avatar”.</p>
+              <h5><span class="badge badge-secondary">Trilogia</span> <span class="badge badge-secondary">2022</span> <span class="badge badge-secondary">Novidade</span></h5>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+          <h2>Sobre</h2>
+          <p>MovieLovers é um site para amantes de filmes que querem ficar por dentro dos últimos acontecimentos do universo cinematográfico. Sinta-se a vontade para ver as melhores novidades sobre os filmes, principalmente da franquia de Star Wars que somos tão apaixonados. Aqui disponibilizamos as melhores críticas e notícias da atualidade do mundo do cinema, além de trazer os trailers e revisões de novos filmes que foram anunciados e também de filmes que já foram lançados. MovieLovers é um site para amantes de filmes que querem ficar por dentro dos últimos acontecimentos do universo cinematográfico.</p>
+          <h2>Editorial</h2>
+          <br>
+          <p><i class="fas fa-user"></i> <strong>Redação:</strong> Rodrigo Gonçalves Ribeiro</p>
+
+          <p><i class="fas fa-user"></i> <strong>Pesquisa:</strong> Rodrigo Gonçalves Ribeiro</p>
+
+          <p><i class="fas fa-user"></i> <strong>Gerente Geral:</strong> Rodrigo Gonçalves Ribeiro</p>
+          <br>
+          <h5><strong>Redes Sociais:</strong></h5>
+
+          <i class="fab fa-facebook-square fa-2x">  </i>
+          <i class="fab fa-twitter fa-2x">  </i>
+          <i class="fab fa-instagram fa-2x">  </i>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 footer-area">
+          Copyright 2020 - Disciplina de Desenvolvimento de Interfaces Web - <strong>ICEI PUC Minas</strong>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 logo-rodape">
+          <img class="logo-img2" src="imgs/logo.png" alt="logo">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src = "./code.js"></script>
+
+</body>
+
+</html>
