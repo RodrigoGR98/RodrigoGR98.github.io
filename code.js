@@ -198,9 +198,13 @@ let carregarDestaques = () => {
 
       filmes.forEach((value, index) => {
         
+        var pars = new URLSearchParams();
+        pars.append("movie",resultado.results[value].id);
+        var urlx = "./movie.html?" + pars.toString();
+
         let htmlcont = `<div class="col-12 col-sm-6 col-md-6 col-lg-3">
                   <div id ="" class="card">
-                  <a href="https://www.themoviedb.org/movie/${resultado.results[value].id}"><img src="https://image.tmdb.org/t/p/w500/${resultado.results[value].poster_path}" class="card-img-top h-100" alt="..."></a>
+                  <a href="${urlx}"><img src="https://image.tmdb.org/t/p/w500/${resultado.results[value].poster_path}" class="card-img-top h-100" alt="..."></a>
                     <div class="card-body">
                       <h5 class="card-title">${resultado.results[value].title}</h5>
                     </div>
@@ -265,9 +269,16 @@ onload = () => {
 
         data = data.substring(0, 4);
 
+        console.log(poster);
+
+
+        var par = new URLSearchParams();
+        par.append("movie",id);
+        var url = "./movie.html?" + par.toString();
+
         let htmlval = `<div class = "row box-filme shadow-sm p-3 mb-5 bg-white">
             <div class = "col-xl-2 col-lg-3 col-md-4">
-              <img src="https://image.tmdb.org/t/p/w500/${poster}" class="card-img-top h-100" alt="">
+            ${poster != null ? `<img src="https://image.tmdb.org/t/p/w500/${poster}" class="card-img-top h-100" alt="">` : `<img src="./imgs/notfound.jpg" class="card-img-top h-100" alt="">`}
             </div>
             <div class = "col-xl-10 col-lg-9 col-md-8">
               <h4 class = "titulo-search">${titulo}</h4>
@@ -277,7 +288,7 @@ onload = () => {
                 sinopse.length > 0 ? sinopse : "Não encontrada"
               }</p>
               <div class = "row coluna-mais">
-              <button type="button" onclick="window.location.href='https://www.themoviedb.org/movie/${id}'" class="btn btn-danger btn-mais">Mais informações</button>
+              <button type="button" onclick="window.location.href='${url}'" class="btn btn-danger btn-mais">Mais informações</button>
               </div>
             </div>
           </div>`;
@@ -379,4 +390,37 @@ onload = () => {
   $("#novidades").click(function () {
     window.location.href = "./index.html#novidades";
   });
+
+  $(".progress").each(function() {
+
+    var value = $(this).attr('data-value');
+    var left = $(this).find('.progress-left .progress-bar');
+    var right = $(this).find('.progress-right .progress-bar');
+
+    if (value > 0) {
+      if (value <= 50) {
+        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+      } else {
+        right.css('transform', 'rotate(180deg)')
+        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+      }
+    }
+
+  })
+
+  function percentageToDegrees(percentage) {
+
+    return percentage / 100 * 360
+
+  }
 };
+
+let infoFilme = () => {
+  var params = new URLSearchParams(window.location.search),
+  mov = params.get("movie");
+  movies.forEach((value) => {
+    console.log(movies[value].movie.id);
+  })
+}
+
+infoFilme();
