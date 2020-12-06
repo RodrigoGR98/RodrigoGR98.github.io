@@ -114,6 +114,7 @@ let pegarInfo = (id, titulo, sinopse, data, nota, trailer, active) => {
       });
 
       for (let i = 0; i < 3; i++) {
+        if(resultado.cast[i] != undefined)
         elenco += resultado.cast[i].name + ", ";
       }
 
@@ -415,12 +416,4 @@ onload = () => {
   }
 };
 
-let infoFilme = () => {
-  var params = new URLSearchParams(window.location.search),
-  mov = params.get("movie");
-  movies.forEach((value) => {
-    console.log(movies[value].movie.id);
-  })
-}
 
-infoFilme();
